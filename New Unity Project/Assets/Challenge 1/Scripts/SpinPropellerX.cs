@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpinPropellerX : MonoBehaviour
 {
-    public float rotationSpeed;
+    public float speed = 3000;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +14,6 @@ public class SpinPropellerX : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.up * rotationSpeed * Time.deltaTime);
+        transform.Rotate(0,0, Time.deltaTime * speed);
     }
 }
